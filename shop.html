@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="FlyStep - Shop Sports Shoes. Browse, filter, and discover premium high-performance athletic footwear.">
+  <title>Shop Sports Shoes | FlyStep - Move Beyond Limits</title>
+
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/shop.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- ====================================================
+       1. ANNOUNCEMENT BAR
+       ==================================================== -->
+  <div class="announcement-bar text-center" id="announcement-bar">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4 mb-1 mb-md-0">
+          <span class="announcement-item">
+            <i class="bi bi-truck" aria-hidden="true"></i> Free Shipping Over ₹999
+          </span>
+        </div>
+        <div class="col-md-4 mb-1 mb-md-0">
+          <span class="announcement-item">
+            <i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i> 30-Day Returns Guarantee
+          </span>
+        </div>
+        <div class="col-md-4">
+          <span class="announcement-item">
+            <i class="bi bi-shield-lock" aria-hidden="true"></i> 100% Secure Checkout
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================
+       2. NAVIGATION
+       ==================================================== -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-custom navbar-light py-3" aria-label="Main navigation">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html" aria-label="FlyStep Homepage">
+          <i class="bi bi-lightning-charge-fill brand-orange" aria-hidden="true"></i>FlyStep
+        </a>
+
+        <!-- Right Side Icons & Mobile Toggler Group -->
+        <div class="d-flex align-items-center gap-2 order-lg-last">
+          <button class="nav-icon-btn" aria-label="Search Catalog" type="button" data-bs-toggle="modal"
+            data-bs-target="#searchModal">
+            <i class="bi bi-search" aria-hidden="true"></i>
+          </button>
+          <button class="nav-icon-btn d-none d-lg-block" aria-label="View Wishlist" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#wishlistDrawer">
+            <i class="bi bi-heart" aria-hidden="true"></i>
+          </button>
+          <button class="nav-icon-btn" aria-label="View Cart" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#cartDrawer">
+            <i class="bi bi-bag" aria-hidden="true"></i>
+            <span class="cart-badge" style="display: none;">0</span>
+          </button>
+          <button class="nav-icon-btn d-none d-lg-block" aria-label="View Profile" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#profileDrawer">
+            <i class="bi bi-person" aria-hidden="true"></i>
+          </button>
+
+          <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation Menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Menu Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav gap-2">
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom active" aria-current="page" href="/shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="#">Men</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="#">Women</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="#">Running</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="#">Training</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom menu-sale fw-semibold" href="#">Sale</a>
+            </li>
+            <!-- Mobile-only items -->
+            <li class="nav-item d-lg-none border-top mt-2 pt-2">
+              <a class="nav-link nav-link-custom" href="#" data-bs-toggle="offcanvas"
+                data-bs-target="#wishlistDrawer"><i class="bi bi-heart me-2" aria-hidden="true"></i>Wishlist</a>
+            </li>
+            <li class="nav-item d-lg-none">
+              <a class="nav-link nav-link-custom" href="#" data-bs-toggle="offcanvas" data-bs-target="#profileDrawer"><i
+                  class="bi bi-person me-2" aria-hidden="true"></i>My
+                Profile</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-4">
+    <div class="container">
+
+      <!-- ====================================================
+           3. BREADCRUMB
+           ==================================================== -->
+      <nav aria-label="breadcrumb" class="breadcrumb-nav">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Shop</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Sports Shoes</li>
+        </ol>
+      </nav>
+
+      <!-- ====================================================
+           4. PAGE HEADER
+           ==================================================== -->
+      <header class="shop-header">
+        <div class="row align-items-center">
+          <div class="col-md-8 text-start">
+            <h1>Shop Sports Shoes</h1>
+            <p>Find the perfect shoes for every workout and every journey.</p>
+          </div>
+          <div class="col-md-4 text-md-end mt-2 mt-md-0">
+            <span class="badge bg-secondary-custom text-primary py-2 px-3 fw-bold rounded-pill" id="productCountLabel">
+              Showing 6 of 6 Products
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Grid Column Wrapper for Sidebar & Grid content -->
+      <div class="row g-4">
+
+        <!-- ====================================================
+             5. FILTER SIDEBAR (Left Column on Desktop)
+             ==================================================== -->
+        <aside class="col-lg-3 d-none d-lg-block">
+          <div class="filter-sidebar">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h5 class="fw-bold mb-0">Filters</h5>
+              <button class="btn btn-link text-decoration-none text-muted p-0 btn-reset-filters" type="button"
+                style="font-size: 0.85rem;">Clear All</button>
+            </div>
+
+            <div class="accordion filter-accordion" id="filterAccordionDesktop">
+              <!-- Item 1: Category -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hdCatD">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseCatD" aria-expanded="true" aria-controls="collapseCatD">
+                    Category
+                  </button>
+                </h2>
+                <div id="collapseCatD" class="accordion-collapse collapse show" aria-labelledby="hdCatD"
+                  data-bs-parent="#filterAccordionDesktop">
+                  <div class="accordion-body">
+                    <div class="filter-checkbox-list">
+                      <label class="filter-checkbox-label">
+                        <input type="checkbox" class="filter-category-checkbox" value="Running"> <span
+                          class="filter-checkbox-text">Running</span>
+                      </label>
+                      <label class="filter-checkbox-label">
+                        <input type="checkbox" class="filter-category-checkbox" value="Training"> <span
+                          class="filter-checkbox-text">Training</span>
+                      </label>
+                      <label class="filter-checkbox-label">
+                        <input type="checkbox" class="filter-category-checkbox" value="Lifestyle"> <span
+                          class="filter-checkbox-text">Lifestyle</span>
+                      </label>
+                      <label class="filter-checkbox-label">
+                        <input type="checkbox" class="filter-category-checkbox" value="Trail Running"> <span
+                          class="filter-checkbox-text">Trail Running</span>
+                      </label>
+                      <label class="filter-checkbox-label">
+                        <input type="checkbox" class="filter-category-checkbox" value="Competition"> <span
+                          class="filter-checkbox-text">Competition</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2: Gender -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hdGenderD">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseGenderD" aria-expanded="false" aria-controls="collapseGenderD">
+                    Gender
+                  </button>
+                </h2>
+                <div id="collapseGenderD" class="accordion-collapse collapse" aria-labelledby="hdGenderD"
+                  data-bs-parent="#filterAccordionDesktop">
+                  <div class="accordion-body">
+                    <div class="filter-checkbox-list">
+                      <label class="filter-checkbox-label">
+                        <input type="checkbox" class="filter-gender-checkbox" value="Men"> <span
+                          class="filter-checkbox-text">Men</span>
+                      </label>
+                      <label class="filter-checkbox-label">
+                        <input type="checkbox" class="filter-gender-checkbox" value="Women"> <span
+                          class="filter-checkbox-text">Women</span>
+                      </label>
+                      <label class="filter-checkbox-label">
+                        <input type="checkbox" class="filter-gender-checkbox" value="Unisex"> <span
+                          class="filter-checkbox-text">Unisex</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3: Price Range -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hdPriceD">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsePriceD" aria-expanded="false" aria-controls="collapsePriceD">
+                    Price Range
+                  </button>
+                </h2>
+                <div id="collapsePriceD" class="accordion-collapse collapse" aria-labelledby="hdPriceD"
+                  data-bs-parent="#filterAccordionDesktop">
+                  <div class="accordion-body">
+                    <input type="range" class="form-range" id="priceRangeSlider" min="3000" max="8000" step="500"
+                      value="8000">
+                    <div class="d-flex justify-content-between mt-2 font-monospace" style="font-size: 0.85rem;">
+                      <span>Min: ₹3,000</span>
+                      <span class="fw-bold text-primary" id="priceRangeValue">₹8,000</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 4: Sizes -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hdSizesD">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseSizesD" aria-expanded="false" aria-controls="collapseSizesD">
+                    Sizes (UK)
+                  </button>
+                </h2>
+                <div id="collapseSizesD" class="accordion-collapse collapse" aria-labelledby="hdSizesD"
+                  data-bs-parent="#filterAccordionDesktop">
+                  <div class="accordion-body">
+                    <div class="size-btn-grid">
+                      <button class="filter-size-btn" data-size="6" type="button">6</button>
+                      <button class="filter-size-btn" data-size="7" type="button">7</button>
+                      <button class="filter-size-btn" data-size="8" type="button">8</button>
+                      <button class="filter-size-btn" data-size="9" type="button">9</button>
+                      <button class="filter-size-btn" data-size="10" type="button">10</button>
+                      <button class="filter-size-btn" data-size="11" type="button">11</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 5: Colors -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hdColorsD">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseColorsD" aria-expanded="false" aria-controls="collapseColorsD">
+                    Colors
+                  </button>
+                </h2>
+                <div id="collapseColorsD" class="accordion-collapse collapse" aria-labelledby="hdColorsD"
+                  data-bs-parent="#filterAccordionDesktop">
+                  <div class="accordion-body">
+                    <div class="color-swatch-grid">
+                      <button class="color-swatch-btn swatch-black" style="background-color: #000000;"
+                        data-color="black" type="button" title="Black"></button>
+                      <button class="color-swatch-btn swatch-white" style="background-color: #ffffff;"
+                        data-color="white" type="button" title="White"></button>
+                      <button class="color-swatch-btn swatch-blue" style="background-color: #2563eb;" data-color="blue"
+                        type="button" title="Blue"></button>
+                      <button class="color-swatch-btn swatch-orange" style="background-color: #f97316;"
+                        data-color="orange" type="button" title="Orange"></button>
+                      <button class="color-swatch-btn swatch-green" style="background-color: #22c55e;"
+                        data-color="green" type="button" title="Green"></button>
+                      <button class="color-swatch-btn swatch-red" style="background-color: #ef4444;" data-color="red"
+                        type="button" title="Red"></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 6: Sports Type -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hdSportsD">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseSportsD" aria-expanded="false" aria-controls="collapseSportsD">
+                    Sports Type
+                  </button>
+                </h2>
+                <div id="collapseSportsD" class="accordion-collapse collapse" aria-labelledby="hdSportsD"
+                  data-bs-parent="#filterAccordionDesktop">
+                  <div class="accordion-body">
+                    <div class="filter-checkbox-list">
+                      <label class="filter-checkbox-label">
+                        <input type="checkbox" class="filter-sports-checkbox" value="Track"> <span
+                          class="filter-checkbox-text">Track</span>
+                      </label>
+                      <label class="filter-checkbox-label">
+                        <input type="checkbox" class="filter-sports-checkbox" value="Trail"> <span
+                          class="filter-checkbox-text">Trail</span>
+                      </label>
+                      <label class="filter-checkbox-label">
+                        <input type="checkbox" class="filter-sports-checkbox" value="Gym"> <span
+                          class="filter-checkbox-text">Gym</span>
+                      </label>
+                      <label class="filter-checkbox-label">
+                        <input type="checkbox" class="filter-sports-checkbox" value="Street"> <span
+                          class="filter-checkbox-text">Street</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 7: Availability -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hdStockD">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseStockD" aria-expanded="false" aria-controls="collapseStockD">
+                    Availability
+                  </button>
+                </h2>
+                <div id="collapseStockD" class="accordion-collapse collapse" aria-labelledby="hdStockD"
+                  data-bs-parent="#filterAccordionDesktop">
+                  <div class="accordion-body">
+                    <div class="filter-checkbox-list">
+                      <label class="filter-checkbox-label">
+                        <input type="checkbox" class="filter-stock-checkbox" value="instock"> <span
+                          class="filter-checkbox-text">In Stock</span>
+                      </label>
+                      <label class="filter-checkbox-label">
+                        <input type="checkbox" class="filter-stock-checkbox" value="outofstock"> <span
+                          class="filter-checkbox-text">Out of Stock</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 8: Ratings -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hdRatingD">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseRatingD" aria-expanded="false" aria-controls="collapseRatingD">
+                    Customer Rating
+                  </button>
+                </h2>
+                <div id="collapseRatingD" class="accordion-collapse collapse" aria-labelledby="hdRatingD"
+                  data-bs-parent="#filterAccordionDesktop">
+                  <div class="accordion-body">
+                    <div class="filter-checkbox-list">
+                      <label class="filter-checkbox-label">
+                        <input type="checkbox" class="filter-rating-checkbox" value="5"> <span
+                          class="filter-checkbox-text">5 Stars Only</span>
+                      </label>
+                      <label class="filter-checkbox-label">
+                        <input type="checkbox" class="filter-rating-checkbox" value="4"> <span
+                          class="filter-checkbox-text">4 Stars & Above</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 9: Discount -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="hdDiscountD">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseDiscountD" aria-expanded="false" aria-controls="collapseDiscountD">
+                    Discount
+                  </button>
+                </h2>
+                <div id="collapseDiscountD" class="accordion-collapse collapse" aria-labelledby="hdDiscountD"
+                  data-bs-parent="#filterAccordionDesktop">
+                  <div class="accordion-body">
+                    <div class="filter-checkbox-list">
+                      <label class="filter-checkbox-label">
+                        <input type="checkbox" class="filter-discount-checkbox" value="15"> <span
+                          class="filter-checkbox-text">15% Off & More</span>
+                      </label>
+                      <label class="filter-checkbox-label">
+                        <input type="checkbox" class="filter-discount-checkbox" value="10"> <span
+                          class="filter-checkbox-text">10% Off & More</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Product Columns Content -->
+        <div class="col-lg-9">
+
+          <!-- ====================================================
+               6. SORT BAR & CONTROLS
+               ==================================================== -->
+          <div class="sort-bar d-flex justify-content-between align-items-center">
+            <!-- Mobile Filters toggle trigger -->
+            <button class="btn btn-outline-secondary d-lg-none mobileFilter" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#mobileFilterDrawer">
+              <i class="bi bi-sliders2 me-2"></i>
+              <span class="">Filters</span>
+            </button>
+
+            <!-- Sorting Select Dropdown -->
+            <div class="d-flex align-items-center gap-2">
+              <label for="sortSelect" class="text-nowrap text-muted d-none d-sm-inline" style="font-size: 0.9rem;">Sort
+                By:</label>
+              <select class="form-select border-secondary-subtle" id="sortSelect"
+                style="width: 180px; font-size: 0.9rem;">
+                <option value="newest">Newest Arrivals</option>
+                <option value="popularity">Popularity</option>
+                <option value="best-selling">Best Selling</option>
+                <option value="highest-rated">Highest Rated</option>
+                <option value="price-low-high">Price: Low to High</option>
+                <option value="price-high-low">Price: High to Low</option>
+              </select>
+            </div>
+
+            <!-- Grid vs List View toggle togglers -->
+            <div class="layout-toggle-group">
+              <button class="layout-toggle-btn active" id="gridViewBtn" aria-label="Switch to grid layout"
+                type="button">
+                <i class="bi bi-grid-3x3-gap-fill"></i>
+              </button>
+              <button class="layout-toggle-btn" id="listViewBtn" aria-label="Switch to list layout" type="button">
+                <i class="bi bi-list-task"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- ====================================================
+               7. PRODUCT GRID
+               ==================================================== -->
+          <div class="row g-4" id="productGrid">
+            <!-- Rendered dynamically by shop.js -->
+          </div>
+
+          <!-- ====================================================
+               8. PROMOTIONAL BANNER
+               ==================================================== -->
+          <article class="plp-promo-banner text-start">
+            <div class="plp-promo-banner-glow"></div>
+            <div class="plp-promo-content">
+              <span class="badge bg-accent text-white mb-3"
+                style="font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;">Limited Campaign</span>
+              <h2 class="fw-bold mb-3 text-white" style="font-size: 2.2rem; letter-spacing: -0.02em;">Summer Running
+                Collection</h2>
+              <p class="text-white-50 mb-4" style="font-size: 1.1rem; line-height: 1.5;">Up to 30% Off on high-grip
+                outdoor, trail, and speed running models. Lace up for your best summer yet.</p>
+              <button class="btn btn-accent px-4 py-2" type="button">Shop Now</button>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ====================================================
+           9. RECENTLY VIEWED
+           ==================================================== -->
+      <section class="recently-viewed-section rounded-4 px-4 py-5 mt-5">
+        <h4 class="fw-bold mb-4 text-start"><i class="bi bi-clock-history me-2 text-primary"></i>Recently Viewed</h4>
+        <div class="recently-viewed-scroll" id="recentlyViewedContainer">
+          <!-- Loaded dynamically from localStorage by shop.js -->
+        </div>
+      </section>
+
+      <!-- ====================================================
+          10. NEWSLETTER
+          ==================================================== -->
+      <section class="newsletter-section bg-transparent" id="newsletter">
+        <div class="newsletter-wrapper text-center">
+          <div class="newsletter-bg-glow"></div>
+          <h2>Stay One Step Ahead</h2>
+          <p>Get new launches and exclusive offers.</p>
+          <form class="newsletter-form">
+            <div class="position-relative">
+              <input type="email" class="form-control newsletter-input" placeholder="Enter your email address" required
+                aria-label="Email address for subscription">
+              <button class="newsletter-btn" type="submit">Subscribe</button>
+            </div>
+            <div class="newsletter-success mt-3" style="display: none;">
+              <i class="bi bi-check-circle-fill"></i> Thank you! You've successfully subscribed.
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ====================================================
+       11. FOOTER
+       ==================================================== -->
+  <footer class="footer-section" id="footer" aria-label="Main Footer">
+    <div class="container">
+      <div class="row gy-5 md-g-5">
+        <!-- Brand and socials -->
+        <div class="col-lg-4">
+          <div class="footer-logo">
+            <i class="bi bi-lightning-charge-fill brand-orange" aria-hidden="true"></i>FlyStep
+          </div>
+          <p class="footer-about">
+            FlyStep designs state-of-the-art sports shoes with engineered responsiveness and comfort. We are committed
+            to athlete performance and eco-conscious engineering.
+          </p>
+          <div class="footer-social-links">
+            <a href="#" class="social-icon-link" aria-label="Visit FlyStep Facebook page"><i class="bi bi-facebook"
+                aria-hidden="true"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Visit FlyStep Twitter profile"><i class="bi bi-twitter"
+                aria-hidden="true"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Visit FlyStep Instagram page"><i class="bi bi-instagram"
+                aria-hidden="true"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Visit FlyStep YouTube channel"><i class="bi bi-youtube"
+                aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <!-- Links Columns -->
+        <div class="col-6 col-md-3 col-lg-2 offset-lg-1">
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Press Kit</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="footer-heading">Support</h4>
+          <ul class="footer-links-list">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Order Tracker</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Store Locator</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-3">
+          <h4 class="footer-heading">Help</h4>
+          <ul class="footer-links-list">
+            <li><a href="#">Size Guide</a></li>
+            <li><a href="#">Shipping Details</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">Official Warranty</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Divider & Bottom legal stuff -->
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <div>© 2026 FlyStep Sports Inc. All Rights Reserved.</div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================================================
+       OFFCANVAS DRAWERS & MODALS
+       ==================================================== -->
+  <!-- Search Modal -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 rounded-4 overflow-hidden shadow-lg">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold" id="searchModalLabel">Search Catalog</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form class="mb-4">
+            <div class="input-group">
+              <span class="input-group-text bg-light border-0"><i class="bi bi-search"></i></span>
+              <input type="text" class="form-control bg-light border-0 py-2" placeholder="Type to search shoes..."
+                aria-label="Search Catalog" autofocus>
+            </div>
+          </form>
+          <div class="popular-searches">
+            <h6 class="text-muted fw-bold mb-3"
+              style="font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;">Popular Searches</h6>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill py-1 px-3"
+                data-bs-dismiss="modal">Running</a>
+              <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill py-1 px-3" data-bs-dismiss="modal">Apex
+                Trainer</a>
+              <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill py-1 px-3" data-bs-dismiss="modal">Trail
+                Blazer</a>
+              <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill py-1 px-3"
+                data-bs-dismiss="modal">Sale</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wishlist Offcanvas Drawer -->
+  <div class="offcanvas offcanvas-end border-0 shadow" tabindex="-1" id="wishlistDrawer"
+    aria-labelledby="wishlistDrawerLabel">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title fw-bold" id="wishlistDrawerLabel"><i class="bi bi-heart me-2 text-danger"></i>My
+        Wishlist</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body" id="wishlistDrawerItems">
+      <!-- Loaded dynamically by components.js -->
+    </div>
+  </div>
+
+  <!-- Cart Offcanvas Drawer -->
+  <div class="offcanvas offcanvas-end border-0 shadow" tabindex="-1" id="cartDrawer" aria-labelledby="cartDrawerLabel">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title fw-bold" id="cartDrawerLabel"><i class="bi bi-bag-check me-2 text-primary"></i>Shopping
+        Cart</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div class="flex-grow-1 overflow-auto" id="cartDrawerItems">
+        <!-- Loaded dynamically by components.js -->
+      </div>
+
+      <div class="border-top pt-3 mt-auto">
+        <div class="d-flex justify-content-between mb-3">
+          <span class="text-muted fw-bold">Subtotal:</span>
+          <span class="fw-bold fs-5 text-primary" id="cartSubtotal">₹0</span>
+        </div>
+        <a href="checkout.html" id="cartDrawerCheckoutBtn" class="btn d-flex align-items-center justify-content-center btn-primary w-100 py-3 mb-2 rounded-3">
+          Proceed to Checkout <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+        <a href="cart.html" class="btn d-flex align-items-center justify-content-center btn-outline-secondary w-100 py-2 rounded-3">
+          Go To Cart
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Profile Offcanvas Drawer (Account Quick View) -->
+  <div class="offcanvas offcanvas-end border-0 shadow" tabindex="-1" id="profileDrawer"
+    aria-labelledby="profileDrawerLabel">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title fw-bold" id="profileDrawerLabel"><i
+          class="bi bi-person-circle me-2 text-secondary"></i>My Account</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="text-center py-4 border-bottom mb-4">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&auto=format&fit=crop"
+          alt="User profile photo" class="rounded-circle mb-3 border border-2 border-primary"
+          style="width: 80px; height: 80px; object-fit: cover;">
+        <h5 class="fw-bold mb-1">Guest User</h5>
+        <span class="text-muted small">guest@flystep.com</span>
+      </div>
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action py-3 border-0"><i
+            class="bi bi-person me-3"></i>Personal Profile</a>
+        <a href="#" class="list-group-item list-group-item-action py-3 border-0"><i
+            class="bi bi-box-seam me-3"></i>Order History</a>
+        <a href="#" class="list-group-item list-group-item-action py-3 border-0"><i class="bi bi-geo-alt me-3"></i>Saved
+          Addresses</a>
+        <a href="#" class="list-group-item list-group-item-action py-3 border-0"><i
+            class="bi bi-credit-card me-3"></i>Payment Methods</a>
+      </div>
+      <button class="btn btn-outline-danger w-100 py-2 mt-5 rounded-3" type="button">Sign In / Register</button>
+    </div>
+  </div>
+
+  <!-- Mobile Offcanvas Filters Drawer -->
+  <div class="offcanvas offcanvas-start border-0 shadow" tabindex="-1" id="mobileFilterDrawer"
+    aria-labelledby="mobileFilterDrawerLabel">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title fw-bold" id="mobileFilterDrawerLabel"><i class="bi bi-sliders2 me-2"></i>Filter
+        Products</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- We load the identical filters here to allow mobile users to use the sidebar filters drawer -->
+      <div class="filter-sidebar border-0 shadow-none p-0">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h6 class="fw-bold mb-0 text-muted uppercase">Filter Options</h6>
+          <button class="btn btn-link text-decoration-none text-muted p-0 btn-reset-filters" type="button"
+            style="font-size: 0.85rem;" data-bs-dismiss="offcanvas">Clear All</button>
+        </div>
+
+        <div class="accordion filter-accordion" id="filterAccordionMobile">
+          <!-- Item 1: Category -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="hdCatM">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCatM"
+                aria-expanded="true" aria-controls="collapseCatM">
+                Category
+              </button>
+            </h2>
+            <div id="collapseCatM" class="accordion-collapse collapse show" aria-labelledby="hdCatM"
+              data-bs-parent="#filterAccordionMobile">
+              <div class="accordion-body">
+                <div class="filter-checkbox-list">
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" class="filter-category-checkbox" value="Running"> <span
+                      class="filter-checkbox-text">Running</span>
+                  </label>
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" class="filter-category-checkbox" value="Training"> <span
+                      class="filter-checkbox-text">Training</span>
+                  </label>
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" class="filter-category-checkbox" value="Lifestyle"> <span
+                      class="filter-checkbox-text">Lifestyle</span>
+                  </label>
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" class="filter-category-checkbox" value="Trail Running"> <span
+                      class="filter-checkbox-text">Trail Running</span>
+                  </label>
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" class="filter-category-checkbox" value="Competition"> <span
+                      class="filter-checkbox-text">Competition</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Gender -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="hdGenderM">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseGenderM" aria-expanded="false" aria-controls="collapseGenderM">
+                Gender
+              </button>
+            </h2>
+            <div id="collapseGenderM" class="accordion-collapse collapse" aria-labelledby="hdGenderM"
+              data-bs-parent="#filterAccordionMobile">
+              <div class="accordion-body">
+                <div class="filter-checkbox-list">
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" class="filter-gender-checkbox" value="Men"> <span
+                      class="filter-checkbox-text">Men</span>
+                  </label>
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" class="filter-gender-checkbox" value="Women"> <span
+                      class="filter-checkbox-text">Women</span>
+                  </label>
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" class="filter-gender-checkbox" value="Unisex"> <span
+                      class="filter-checkbox-text">Unisex</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Price Range -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="hdPriceM">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsePriceM" aria-expanded="false" aria-controls="collapsePriceM">
+                Price Range
+              </button>
+            </h2>
+            <div id="collapsePriceM" class="accordion-collapse collapse" aria-labelledby="hdPriceM"
+              data-bs-parent="#filterAccordionMobile">
+              <div class="accordion-body">
+                <input type="range" class="form-range" id="priceRangeSliderMobile" min="3000" max="8000" step="500"
+                  value="8000">
+                <div class="d-flex justify-content-between mt-2 font-monospace" style="font-size: 0.85rem;">
+                  <span>Min: ₹3,000</span>
+                  <span class="fw-bold text-primary" id="priceRangeValueMobile">₹8,000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: Sizes -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="hdSizesM">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSizesM" aria-expanded="false" aria-controls="collapseSizesM">
+                Sizes (UK)
+              </button>
+            </h2>
+            <div id="collapseSizesM" class="accordion-collapse collapse" aria-labelledby="hdSizesM"
+              data-bs-parent="#filterAccordionMobile">
+              <div class="accordion-body">
+                <div class="size-btn-grid">
+                  <button class="filter-size-btn" data-size="6" type="button">6</button>
+                  <button class="filter-size-btn" data-size="7" type="button">7</button>
+                  <button class="filter-size-btn" data-size="8" type="button">8</button>
+                  <button class="filter-size-btn" data-size="9" type="button">9</button>
+                  <button class="filter-size-btn" data-size="10" type="button">10</button>
+                  <button class="filter-size-btn" data-size="11" type="button">11</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5: Colors -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="hdColorsM">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseColorsM" aria-expanded="false" aria-controls="collapseColorsM">
+                Colors
+              </button>
+            </h2>
+            <div id="collapseColorsM" class="accordion-collapse collapse" aria-labelledby="hdColorsM"
+              data-bs-parent="#filterAccordionMobile">
+              <div class="accordion-body">
+                <div class="color-swatch-grid">
+                  <button class="color-swatch-btn swatch-black" style="background-color: #000000;" data-color="black"
+                    type="button" title="Black"></button>
+                  <button class="color-swatch-btn swatch-white" style="background-color: #ffffff;" data-color="white"
+                    type="button" title="White"></button>
+                  <button class="color-swatch-btn swatch-blue" style="background-color: #2563eb;" data-color="blue"
+                    type="button" title="Blue"></button>
+                  <button class="color-swatch-btn swatch-orange" style="background-color: #f97316;" data-color="orange"
+                    type="button" title="Orange"></button>
+                  <button class="color-swatch-btn swatch-green" style="background-color: #22c55e;" data-color="green"
+                    type="button" title="Green"></button>
+                  <button class="color-swatch-btn swatch-red" style="background-color: #ef4444;" data-color="red"
+                    type="button" title="Red"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6: Sports Type -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="hdSportsM">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSportsM" aria-expanded="false" aria-controls="collapseSportsM">
+                Sports Type
+              </button>
+            </h2>
+            <div id="collapseSportsM" class="accordion-collapse collapse" aria-labelledby="hdSportsM"
+              data-bs-parent="#filterAccordionMobile">
+              <div class="accordion-body">
+                <div class="filter-checkbox-list">
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" class="filter-sports-checkbox" value="Track"> <span
+                      class="filter-checkbox-text">Track</span>
+                  </label>
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" class="filter-sports-checkbox" value="Trail"> <span
+                      class="filter-checkbox-text">Trail</span>
+                  </label>
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" class="filter-sports-checkbox" value="Gym"> <span
+                      class="filter-checkbox-text">Gym</span>
+                  </label>
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" class="filter-sports-checkbox" value="Street"> <span
+                      class="filter-checkbox-text">Street</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 7: Availability -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="hdStockM">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseStockM" aria-expanded="false" aria-controls="collapseStockM">
+                Availability
+              </button>
+            </h2>
+            <div id="collapseStockM" class="accordion-collapse collapse" aria-labelledby="hdStockM"
+              data-bs-parent="#filterAccordionMobile">
+              <div class="accordion-body">
+                <div class="filter-checkbox-list">
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" class="filter-stock-checkbox" value="instock"> <span
+                      class="filter-checkbox-text">In Stock</span>
+                  </label>
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" class="filter-stock-checkbox" value="outofstock"> <span
+                      class="filter-checkbox-text">Out of Stock</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 8: Ratings -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="hdRatingM">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseRatingM" aria-expanded="false" aria-controls="collapseRatingM">
+                Customer Rating
+              </button>
+            </h2>
+            <div id="collapseRatingM" class="accordion-collapse collapse" aria-labelledby="hdRatingM"
+              data-bs-parent="#filterAccordionMobile">
+              <div class="accordion-body">
+                <div class="filter-checkbox-list">
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" class="filter-rating-checkbox" value="5"> <span
+                      class="filter-checkbox-text">5 Stars Only</span>
+                  </label>
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" class="filter-rating-checkbox" value="4"> <span
+                      class="filter-checkbox-text">4 Stars & Above</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 9: Discount -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="hdDiscountM">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseDiscountM" aria-expanded="false" aria-controls="collapseDiscountM">
+                Discount
+              </button>
+            </h2>
+            <div id="collapseDiscountM" class="accordion-collapse collapse" aria-labelledby="hdDiscountM"
+              data-bs-parent="#filterAccordionMobile">
+              <div class="accordion-body">
+                <div class="filter-checkbox-list">
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" class="filter-discount-checkbox" value="15"> <span
+                      class="filter-checkbox-text">15% Off & More</span>
+                  </label>
+                  <label class="filter-checkbox-label">
+                    <input type="checkbox" class="filter-discount-checkbox" value="10"> <span
+                      class="filter-checkbox-text">10% Off & More</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Close actions -->
+        <button class="btn btn-primary w-100 py-2 mt-4" data-bs-dismiss="offcanvas" type="button">Apply Filters</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick View Modal -->
+  <div class="modal fade" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 rounded-4 overflow-hidden shadow-lg">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body modal-body-content pt-0 px-4 pb-4">
+          <!-- Will be filled dynamically by components.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/shop.js"></script>
+
+  <!-- Mobile Price Range Sync Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const priceSliderMobile = document.getElementById('priceRangeSliderMobile');
+      const priceValueLabelMobile = document.getElementById('priceRangeValueMobile');
+      const priceSliderDesktop = document.getElementById('priceRangeSlider');
+      const priceValueLabelDesktop = document.getElementById('priceRangeValue');
+
+      if (priceSliderMobile && priceSliderDesktop) {
+        priceSliderMobile.addEventListener('input', (e) => {
+          const val = parseInt(e.target.value);
+          priceSliderDesktop.value = val;
+          if (priceValueLabelMobile) priceValueLabelMobile.textContent = `₹${val.toLocaleString('en-IN')}`;
+          if (priceValueLabelDesktop) priceValueLabelDesktop.textContent = `₹${val.toLocaleString('en-IN')}`;
+          activeFilters.maxPrice = val;
+          renderProducts();
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

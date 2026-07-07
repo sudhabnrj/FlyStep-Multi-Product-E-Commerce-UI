@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmed | FlyStep - Move Beyond Limits</title>
+  <meta name="description" content="Your FlyStep order has been confirmed! Track your delivery, review your purchase, and continue shopping for premium sports footwear.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- CSS Stylesheets -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/order-confirmation.css">
+
+  <!-- Core Shared Components -->
+  <script src="assets/js/components.js"></script>
+</head>
+
+<body class="bg-light">
+
+  <!-- ====================================================
+       1. ANNOUNCEMENT BAR
+       ==================================================== -->
+  <div class="announcement-bar py-2" role="region" aria-label="Thank you banner">
+    <div class="container text-center">
+      <div class="d-flex justify-content-center align-items-center gap-4 text-white"
+        style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em;">
+        <span><i class="bi bi-heart-fill me-1" style="color:#f87171;"></i> THANK YOU FOR SHOPPING WITH FLYSTEP</span>
+        <span class="d-none d-md-inline">&bull;</span>
+        <span class="d-none d-md-inline"><i class="bi bi-shield-lock-fill me-1 text-success"></i> SECURE PURCHASE CONFIRMED</span>
+        <span class="d-none d-md-inline">&bull;</span>
+        <span class="d-none d-md-inline"><i class="bi bi-arrow-left-right me-1"></i> EASY 30-DAY RETURNS</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================
+       2. MINIMAL NAVIGATION
+       ==================================================== -->
+  <header class="navbar navbar-expand-lg navbar-minimal sticky-top py-3" aria-label="Confirmation header">
+    <div class="container justify-content-between">
+      <a class="navbar-brand text-decoration-none" href="index.html" aria-label="FlyStep Homepage">
+        <i class="bi bi-lightning-charge-fill brand-orange" aria-hidden="true"></i>FlyStep
+      </a>
+      <div class="d-flex align-items-center gap-3">
+        <a href="#deliveryTimelineSection" class="nav-action-link d-none d-md-inline" aria-label="Track your order">
+          <i class="bi bi-geo-alt me-1"></i>Track Order
+        </a>
+        <a href="shop.html" class="nav-action-link primary" aria-label="Continue Shopping">
+          <i class="bi bi-bag me-1"></i>Continue Shopping
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====================================================
+       3. BREADCRUMB
+       ==================================================== -->
+  <div class="container py-3">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0" style="font-size: 0.8rem; font-weight: 600;">
+        <li class="breadcrumb-item"><a href="index.html" class="text-muted text-decoration-none">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page" style="color: var(--accent);">Order Confirmation</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- ====================================================
+       4. SUCCESS HERO
+       ==================================================== -->
+  <section class="success-hero text-center" aria-label="Order success confirmation">
+    <div class="container">
+
+      <!-- Animated Success Icon -->
+      <div class="success-icon-ring" aria-hidden="true">
+        <i class="bi bi-check-lg"></i>
+      </div>
+
+      <!-- Heading -->
+      <h1 class="success-hero-title">Thank You!</h1>
+      <p class="success-hero-subtitle">Your order has been placed successfully and is being processed.</p>
+
+      <!-- Order Number -->
+      <div class="d-flex justify-content-center mb-4">
+        <div class="order-number-badge" role="group" aria-label="Order number">
+          <i class="bi bi-receipt-cutoff" aria-hidden="true"></i>
+          <span>Order: <span class="order-id" id="heroOrderNumber">#FS2026001458</span></span>
+          <button class="btn-copy-order" id="copyOrderBtn" aria-label="Copy order number" title="Copy order number">
+            <i class="bi bi-clipboard"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Meta Pills -->
+      <div class="hero-meta-pills" role="list" aria-label="Order details">
+        <div class="hero-meta-pill" role="listitem">
+          <i class="bi bi-calendar3 text-secondary" aria-hidden="true"></i>
+          <div>
+            <span class="pill-label">Est. Delivery</span>
+            <span class="pill-value" id="heroDeliveryDate">10 July 2026</span>
+          </div>
+        </div>
+        <div class="hero-meta-pill" role="listitem">
+          <i class="bi bi-check-circle-fill text-success" aria-hidden="true"></i>
+          <div>
+            <span class="pill-label">Payment</span>
+            <span class="pill-value" id="heroPayStatus">Paid</span>
+          </div>
+        </div>
+        <div class="hero-meta-pill" role="listitem">
+          <i class="bi bi-truck text-secondary" aria-hidden="true"></i>
+          <div>
+            <span class="pill-label">Shipping</span>
+            <span class="pill-value">Free Express</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero CTAs -->
+      <div class="hero-cta-row">
+        <a href="#deliveryTimelineSection" class="btn-track-order" aria-label="Track your order">
+          <i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Track Order
+        </a>
+        <a href="shop.html" class="btn-continue-shopping" aria-label="Continue shopping">
+          <i class="bi bi-arrow-right" aria-hidden="true"></i> Continue Shopping
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="container py-5" style="max-width: 920px;">
+
+    <!-- ====================================================
+         5. ORDER SUMMARY
+         ==================================================== -->
+    <section class="confirmation-section" aria-label="Order Summary">
+      <h2 class="confirmation-section-title fade-in-up">
+        <i class="bi bi-receipt-cutoff" aria-hidden="true"></i> Order Summary
+      </h2>
+      <div class="confirmation-card fade-in-up">
+        <div class="order-summary-grid mb-4">
+          <div class="summary-detail-item">
+            <div class="summary-detail-label">Order Number</div>
+            <div class="summary-detail-value" id="summaryOrderNum">#FS2026001458</div>
+          </div>
+          <div class="summary-detail-item">
+            <div class="summary-detail-label">Order Date</div>
+            <div class="summary-detail-value" id="summaryOrderDate">06 July 2026</div>
+          </div>
+          <div class="summary-detail-item">
+            <div class="summary-detail-label">Payment Method</div>
+            <div class="summary-detail-value" id="summaryPaymentMethod">Credit Card</div>
+          </div>
+          <div class="summary-detail-item">
+            <div class="summary-detail-label">Shipping Method</div>
+            <div class="summary-detail-value" id="summaryShipping">Free Express Delivery</div>
+          </div>
+          <div class="summary-detail-item">
+            <div class="summary-detail-label">Estimated Delivery</div>
+            <div class="summary-detail-value success-text" id="summaryDelivery">10 July 2026</div>
+          </div>
+          <div class="summary-detail-item">
+            <div class="summary-detail-label">Order Status</div>
+            <div class="summary-detail-value success-text">Confirmed &#10003;</div>
+          </div>
+        </div>
+
+        <!-- Pricing Breakdown -->
+        <table class="order-pricing-table">
+          <tbody>
+            <tr>
+              <td class="text-muted">Subtotal</td>
+              <td class="text-end fw-bold" id="summarySubtotal">&#8377;9,798</td>
+            </tr>
+            <tr>
+              <td class="discount-cell">Discount Applied</td>
+              <td class="text-end discount-cell" id="summaryDiscount">-&#8377;800</td>
+            </tr>
+            <tr>
+              <td class="text-muted">Shipping</td>
+              <td class="text-end fw-bold text-success" id="summaryShippingFee">FREE</td>
+            </tr>
+            <tr>
+              <td class="text-muted">Tax (GST 18%)</td>
+              <td class="text-end fw-bold" id="summaryTax">&#8377;180</td>
+            </tr>
+            <tr>
+              <td class="fw-bold" style="font-size:1.05rem;">Grand Total</td>
+              <td class="text-end fw-bold" style="font-size:1.05rem;" id="summaryGrandTotal">&#8377;9,178</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         6. PURCHASED PRODUCTS
+         ==================================================== -->
+    <section class="confirmation-section" aria-label="Purchased Products">
+      <h2 class="confirmation-section-title fade-in-up">
+        <i class="bi bi-bag-check" aria-hidden="true"></i> Your Items
+      </h2>
+      <div class="d-flex flex-column gap-3" id="purchasedProductsList" aria-live="polite">
+        <div class="text-center text-muted py-4">
+          <div class="spinner-border spinner-border-sm me-2" role="status"></div> Loading your items...
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         7. DELIVERY TIMELINE
+         ==================================================== -->
+    <section class="confirmation-section" id="deliveryTimelineSection" aria-label="Delivery Timeline">
+      <h2 class="confirmation-section-title fade-in-up">
+        <i class="bi bi-truck" aria-hidden="true"></i> Delivery Timeline
+      </h2>
+      <div class="confirmation-card fade-in-up">
+        <div class="delivery-timeline" role="list" aria-label="Order delivery progress">
+          <!-- Progress bar line -->
+          <div class="delivery-timeline-progress" id="timelineProgressBar" style="width: 0%;"></div>
+
+          <!-- Step 1: Order Confirmed -->
+          <div class="timeline-step completed" role="listitem" aria-label="Order Confirmed">
+            <div class="timeline-step-dot"><i class="bi bi-check-lg" aria-hidden="true"></i></div>
+            <div class="timeline-step-label">Order<br>Confirmed</div>
+            <div class="timeline-step-date">Today</div>
+          </div>
+
+          <!-- Step 2: Preparing Order (ACTIVE) -->
+          <div class="timeline-step active" role="listitem" aria-current="step" aria-label="Preparing Order - current step">
+            <div class="timeline-step-dot"><i class="bi bi-box-seam" aria-hidden="true"></i></div>
+            <div class="timeline-step-label">Preparing<br>Order</div>
+            <div class="timeline-step-date">In progress</div>
+          </div>
+
+          <!-- Step 3: Shipped -->
+          <div class="timeline-step" role="listitem" aria-label="Shipped - pending">
+            <div class="timeline-step-dot"><i class="bi bi-truck" aria-hidden="true"></i></div>
+            <div class="timeline-step-label">Shipped</div>
+            <div class="timeline-step-date">Soon</div>
+          </div>
+
+          <!-- Step 4: Out for Delivery -->
+          <div class="timeline-step" role="listitem" aria-label="Out for Delivery - pending">
+            <div class="timeline-step-dot"><i class="bi bi-geo-alt" aria-hidden="true"></i></div>
+            <div class="timeline-step-label">Out For<br>Delivery</div>
+            <div class="timeline-step-date">&mdash;</div>
+          </div>
+
+          <!-- Step 5: Delivered -->
+          <div class="timeline-step" role="listitem" aria-label="Delivered - pending">
+            <div class="timeline-step-dot"><i class="bi bi-house-check" aria-hidden="true"></i></div>
+            <div class="timeline-step-label">Delivered</div>
+            <div class="timeline-step-date" id="timelineDeliveryDate">Est. Soon</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         8. SHIPPING, BILLING & PAYMENT INFORMATION
+         ==================================================== -->
+    <section class="confirmation-section" aria-label="Shipping, Billing and Payment Details">
+      <h2 class="confirmation-section-title fade-in-up">
+        <i class="bi bi-info-circle" aria-hidden="true"></i> Order Details
+      </h2>
+      <div class="info-three-col fade-in-up">
+
+        <!-- Shipping Address Card -->
+        <div class="info-card">
+          <div class="info-card-title">
+            <i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Shipping Address
+          </div>
+          <div id="shippingAddressCard">
+            <div class="text-muted small">Loading...</div>
+          </div>
+        </div>
+
+        <!-- Billing Address Card -->
+        <div class="info-card">
+          <div class="info-card-title">
+            <i class="bi bi-receipt" aria-hidden="true"></i> Billing Address
+          </div>
+          <div id="billingAddressCard">
+            <div class="text-muted small">Loading...</div>
+          </div>
+        </div>
+
+        <!-- Payment Information Card -->
+        <div class="info-card">
+          <div class="info-card-title">
+            <i class="bi bi-credit-card-fill" aria-hidden="true"></i> Payment Information
+          </div>
+          <div id="paymentInfoCard">
+            <div class="text-muted small">Loading...</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================================================
+       10. RECOMMENDED PRODUCTS
+       ==================================================== -->
+  <section class="recommended-section" aria-label="Recommended Products">
+    <div class="container py-2">
+      <h2 class="confirmation-section-title fade-in-up" style="justify-content: center; margin-bottom: 36px;">
+        <i class="bi bi-stars" aria-hidden="true"></i> You May Also Like
+      </h2>
+      <div class="row g-4" id="recommendedProductsGrid" aria-live="polite">
+        <!-- Populated dynamically by order-confirmation.js using standard product cards -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       11. LOYALTY / REWARDS
+       ==================================================== -->
+  <section class="loyalty-section text-center" aria-label="Loyalty Rewards">
+    <div class="container">
+      <div class="loyalty-badge-glow" aria-hidden="true">
+        <i class="bi bi-trophy-fill"></i>
+      </div>
+      <div class="loyalty-points-display" id="loyaltyPointsDisplay">918</div>
+      <div class="loyalty-points-label">FlyStep Reward Points Earned This Order</div>
+
+      <div class="loyalty-benefits-grid" role="list" aria-label="Membership benefits">
+        <div class="loyalty-benefit-item" role="listitem">
+          <i class="bi bi-percent" aria-hidden="true"></i>
+          <h6>Exclusive Discounts</h6>
+          <p>Members get up to 20% off on every future order</p>
+        </div>
+        <div class="loyalty-benefit-item" role="listitem">
+          <i class="bi bi-lightning-fill" aria-hidden="true"></i>
+          <h6>Early Access</h6>
+          <p>Shop new arrivals 24 hours before they go public</p>
+        </div>
+        <div class="loyalty-benefit-item" role="listitem">
+          <i class="bi bi-gift-fill" aria-hidden="true"></i>
+          <h6>Member-Only Gifts</h6>
+          <p>Receive exclusive merchandise on milestone orders</p>
+        </div>
+      </div>
+
+      <a href="shop.html" class="btn-join-club" aria-label="Join FlyStep Club membership program">
+        <i class="bi bi-star-fill" aria-hidden="true"></i> Join FlyStep Club &mdash; It&apos;s Free
+      </a>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       12. CUSTOMER SUPPORT
+       ==================================================== -->
+  <section style="padding: 56px 0; border-bottom: 1.5px solid var(--border-color);" aria-label="Customer Support">
+    <div class="container">
+      <h2 class="confirmation-section-title fade-in-up" style="justify-content: center; margin-bottom: 36px;">
+        <i class="bi bi-headset" aria-hidden="true"></i> Need Help?
+      </h2>
+      <div class="support-cards-grid fade-in-up" role="list" aria-label="Support options">
+        <a href="#" class="support-card-item live-chat-card" role="listitem" aria-label="Open Live Chat">
+          <i class="bi bi-chat-dots-fill" aria-hidden="true"></i>
+          <h6>Live Chat</h6>
+          <p>Chat with us instantly</p>
+        </a>
+        <a href="mailto:support@flystep.com" class="support-card-item" role="listitem" aria-label="Email Support">
+          <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+          <h6>Email Support</h6>
+          <p>support@flystep.com</p>
+        </a>
+        <a href="tel:+918001234567" class="support-card-item" role="listitem" aria-label="Call Support">
+          <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+          <h6>Call Us</h6>
+          <p>1800-123-4567 (Toll Free)</p>
+        </a>
+        <a href="#" class="support-card-item" role="listitem" aria-label="View FAQ">
+          <i class="bi bi-question-circle-fill" aria-hidden="true"></i>
+          <h6>FAQs</h6>
+          <p>Browse help articles</p>
+        </a>
+      </div>
+      <p class="text-center text-muted mt-4 small fw-semibold">Support Hours: Mon&ndash;Sat, 9AM &ndash; 7PM IST</p>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       13. CLOSING CTA
+       ==================================================== -->
+  <section class="closing-cta-section text-center" aria-label="Continue Shopping CTA">
+    <div class="container">
+      <h2 class="closing-cta-title fade-in-up">Ready For Your Next Run?</h2>
+      <p class="closing-cta-sub fade-in-up">Explore our latest collection of premium sports footwear.</p>
+      <div class="closing-cta-buttons fade-in-up">
+        <a href="shop.html"
+          class="btn-track-order"
+          style="background-color: var(--accent); box-shadow: 0 4px 16px rgba(249,115,22,0.3);"
+          aria-label="Continue Shopping">
+          <i class="bi bi-bag-fill" aria-hidden="true"></i> Continue Shopping
+        </a>
+        <a href="#deliveryTimelineSection" class="btn-continue-shopping" aria-label="Track your order">
+          <i class="bi bi-geo-alt" aria-hidden="true"></i> Track Order
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       14. NEWSLETTER
+       ==================================================== -->
+  <section class="newsletter-section text-center" aria-label="Newsletter subscription">
+    <div class="container">
+      <h3>Stay One Step Ahead</h3>
+      <p>Get early access to new launches, exclusive offers and member-only discounts.</p>
+      <form class="newsletter-form-row" id="confirmationNewsletterForm">
+        <input type="email" id="confirmationNewsletterEmail" placeholder="Enter your email address" required
+          aria-label="Email address for newsletter">
+        <button type="submit" class="btn-newsletter-subscribe" id="confirmationNewsletterBtn">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       15. FOOTER (Global E-commerce Footer)
+       ==================================================== -->
+  <footer class="footer-section" id="footer" aria-label="Main Footer">
+    <div class="container">
+      <div class="row gy-5 md-g-5">
+        <!-- Brand and socials -->
+        <div class="col-lg-4 text-start">
+          <div class="footer-logo">
+            <i class="bi bi-lightning-charge-fill brand-orange" aria-hidden="true"></i>FlyStep
+          </div>
+          <p class="footer-about">
+            FlyStep designs state-of-the-art sports shoes with engineered responsiveness and comfort. We are committed
+            to athlete performance and eco-conscious engineering.
+          </p>
+          <div class="footer-social-links">
+            <a href="#" class="social-icon-link" aria-label="Visit FlyStep Facebook page"><i class="bi bi-facebook"
+                aria-hidden="true"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Visit FlyStep Twitter profile"><i class="bi bi-twitter"
+                aria-hidden="true"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Visit FlyStep Instagram page"><i class="bi bi-instagram"
+                aria-hidden="true"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Visit FlyStep YouTube channel"><i class="bi bi-youtube"
+                aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <!-- Links Columns -->
+        <div class="col-6 col-md-3 col-lg-2 offset-lg-1 text-start">
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Press Kit</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2 text-start">
+          <h4 class="footer-heading">Support</h4>
+          <ul class="footer-links-list">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Order Tracker</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Store Locator</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-3 text-start">
+          <h4 class="footer-heading">Help</h4>
+          <ul class="footer-links-list">
+            <li><a href="#">Size Guide</a></li>
+            <li><a href="#">Shipping Details</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">Official Warranty</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Divider & Bottom legal stuff -->
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 FlyStep Sports Inc. All Rights Reserved.</div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Copy Toast -->
+  <div class="copy-toast" id="copyToast" role="alert" aria-live="polite">
+    <span class="toast-message">Copied!</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="assets/js/order-confirmation.js"></script>
+</body>
+
+</html>
