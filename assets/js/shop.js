@@ -453,7 +453,7 @@ function generateProductCardHtml(prod, viewMode, includeColWrapper = true) {
   const infoSectionHtml = viewMode === 'list'
     ? `
       <span class="product-cat">${prod.category}</span>
-      <h3 class="product-name">${prod.name}</h3>
+      <h3 class="product-name"><a href="product.html?id=${prod.id}" class="product-name-link">${prod.name}</a></h3>
       
       <div class="product-rating">
         <div class="rating-stars" aria-label="${prod.rating} stars rating">
@@ -483,7 +483,7 @@ function generateProductCardHtml(prod, viewMode, includeColWrapper = true) {
     `
     : `
       <span class="product-cat">${prod.category}</span>
-      <h3 class="product-name">${prod.name}</h3>
+      <h3 class="product-name"><a href="product.html?id=${prod.id}" class="product-name-link">${prod.name}</a></h3>
       
       <div class="product-rating">
         <div class="rating-stars" aria-label="${prod.rating} stars rating">

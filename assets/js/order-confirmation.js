@@ -125,6 +125,7 @@ const ORDER_DATA = buildOrderData();
 /* ── RECOMMENDED PRODUCTS ───────────────────────────── */
 const RECOMMENDED_PRODUCTS = [
   {
+    id: 'plp-2',
     name: 'FlyStep Air Rush',
     category: 'Road Running',
     price: 5499,
@@ -134,6 +135,7 @@ const RECOMMENDED_PRODUCTS = [
     img: 'https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=400&h=300&fit=crop'
   },
   {
+    id: 'plp-4',
     name: 'FlyStep Endurance X',
     category: 'Trail Running',
     price: 6299,
@@ -143,6 +145,7 @@ const RECOMMENDED_PRODUCTS = [
     img: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop'
   },
   {
+    id: 'plp-5',
     name: 'FlyStep PowerStride',
     category: 'Gym & Training',
     price: 3999,
@@ -152,6 +155,7 @@ const RECOMMENDED_PRODUCTS = [
     img: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=400&h=300&fit=crop'
   },
   {
+    id: 'plp-6',
     name: 'FlyStep Sprint Elite',
     category: 'Speed & Track',
     price: 7299,
@@ -338,7 +342,7 @@ function populateRecommendedProducts() {
             '<button type="button" class="btn-wishlist" aria-label="Add to Wishlist"><i class="bi bi-heart"></i></button>' +
             '<button type="button" class="btn-quickview" aria-label="Quick View"><i class="bi bi-eye"></i></button>' +
           '</div>' +
-          '<a href="product.html">' +
+          '<a href="product.html?id=' + p.id + '">' +
             '<img src="' + p.img + '" alt="' + p.name + ' shoe image" class="product-img" loading="lazy">' +
           '</a>' +
           '<div class="product-hover-cart">' +
@@ -347,7 +351,7 @@ function populateRecommendedProducts() {
         '</div>' +
         '<div class="product-info">' +
           '<span class="product-cat">' + p.category + '</span>' +
-          '<h3 class="product-name"><a href="product.html">' + p.name + '</a></h3>' +
+          '<h3 class="product-name"><a href="product.html?id=' + p.id + '" class="product-name-link">' + p.name + '</a></h3>' +
           '<div class="product-rating">' +
             '<div class="rating-stars">' + starHtml(p.rating) + '</div>' +
             '<span class="rating-text">(' + p.reviews + ')</span>' +
